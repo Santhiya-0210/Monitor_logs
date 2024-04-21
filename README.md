@@ -36,7 +36,7 @@ The script solution is hosted on GitHub. You can access it [here](https://github
 
 ## Contact Information
 - Santhiya
-- Your Email: santhiya02m@gmail.com
+- Your Email: Dia123thiya@gmail.com
 - GitHub: [https://github.com/Santhiya-0210/Monitor_logs.git](https://github.com/Santhiya-0210/Monitor_logs.git)
 
 ```
