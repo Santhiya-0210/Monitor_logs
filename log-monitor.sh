@@ -31,7 +31,7 @@ function analyze_logs() {
 
 # Main loop to monitor new log entries
 echo "Monitoring new entries in the log file: $LOG_FILE"
-tail --follow=name -n 0  $LOG_FILE | while IFS= read -r LINE
+tail --follow=name $LOG_FILE | while IFS= read -r LINE
 do
     echo "$LINE"
     analyze_logs  # Perform log analysis for each new log entry
