@@ -23,18 +23,17 @@ function ctrl_c() {
     exit 0
 }
 
+# Function to perform log analysis
+function analyze_logs() {
+    echo "Analyzing log file for errors..."
+    echo "Error messages count: $(grep -ic 'error' $LOG_FILE)"
+}
+
 # Main loop to monitor new log entries
 echo "Monitoring new entries in the log file: $LOG_FILE"
-tail -f $LOG_FILE | while read LINE
+tail --follow=name -n 0  $LOG_FILE | while IFS= read -r LINE
 do
     echo "$LINE"
+    analyze_logs  # Perform log analysis for each new log entry
 done
-[200~# Function to perform log analysis
-function analyze_logs() {
-	    echo "Analyzing log file for errors..."
-	        echo "Error messages count: $(grep -ic 'error' $LOG_FILE)"
-	}
-
-	# Add this line before the tail command in the main loop:
-	analyze_logs
 
